@@ -1,0 +1,20 @@
+FROM arm32v6/python:3.7-alpine
+
+RUN apk add --update alpine-sdk linux-headers
+
+COPY requirements.txt .
+
+RUN export PIP_DEFAULT_TIMEOUT=100 && \
+    pip3 install --upgrade pip && pip3 install --upgrade setuptools && \
+    pip3 install -r requirements.txt
+
+
+# Add the application
+COPY ./app/*.py /
+
+# Disable output buffering 
+ENV PYTHONUNBUFFERED=1
+
+EXPOSE 3000
+
+CMD ["python3","main.py"]
