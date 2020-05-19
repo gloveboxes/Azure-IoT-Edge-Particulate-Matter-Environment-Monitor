@@ -2,7 +2,7 @@ import json
 import asyncio
 from azure.iot.device.aio import IoTHubModuleClient
 import sys
-from device_provisioning_service import Device
+# from device_provisioning_service import Device
 from sensor import Sensor
 import os
 
