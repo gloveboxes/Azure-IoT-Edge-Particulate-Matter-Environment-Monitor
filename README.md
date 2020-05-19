@@ -12,6 +12,8 @@ When I think about building Azure Iot Edge solutions I think in three steps: Cra
 
 The tutorial assumes you have completed the crawl, walk stages and you are ready to run and create an IoT Edge solution. You will set up your Raspberry Pi, configured SSH authentication, enabled Visual Studio Code Remote SSH development, have the solution running in Docker on the Raspberry Pi, streaming telemetry to Azure IoT Central.
 
+---
+
 ## Install Azure IoT Edge on the Raspberry Pi
 
 Start an SSH session from your computer to the RAspberry Pi.
@@ -46,6 +48,8 @@ From the SSH session, run the following commands:
 
 **Do NOT close the SSH session.**
 
+---
+
 ## Configure Azure IoT Edge on the Raspberry Pi
 
 From IoT Central, open the device you created in Part 1 of creating an Air Quality Monitoring solution. This section assumes you named the IoT Edge device **rpi-edge**.
@@ -78,6 +82,8 @@ From IoT Central, open the device you created in Part 1 of creating an Air Quali
 
 **Do NOT close the SSH session.**
 
+---
+
 ## Install the Docker Registry on the Raspberry Pi
 
 Azure IoT Edge relies on Docker images being distributed from a [Docker Registry](https://docs.docker.com/registry/). In production you would deploy Docker images from a registry such as [Azure Container Registry](https://azure.microsoft.com/en-us/services/container-registry/) or [Docker Hub](https://hub.docker.com/).
@@ -89,8 +95,19 @@ From the SSH session you previous started.
 ```bash
 docker run -d -p 5000:5000 --restart=always --name registry registry:2
 ```
+---
 
-### Start a VS Code Remote SSH Session
+## Clone the IoT Edge solution to the Raspberry Pi
+
+From the SSH session you previous started.
+
+```bash
+git clone ...
+```
+
+---
+
+## Start a VS Code Remote SSH Session
 
 
 
