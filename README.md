@@ -58,9 +58,9 @@ From the SSH session, run the following commands:
 2. Copy the following bash command block, and paste into the SSH session to install Azure IoT Edge. Press <kbd>Enter</kbd> to start the installation process.
 
     ```bash
-    curl https://packages.microsoft.com/config/debian/stretch/multiarch/prod.list > ./microsoft-prod.list && \
+    curl https://packages.microsoft.com/config/debian/stretch/multiarch/prod.list?WT.mc_id=iot-0000-dglover > ./microsoft-prod.list && \
     sudo cp ./microsoft-prod.list /etc/apt/sources.list.d/ && \
-    curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg && \
+    curl https://packages.microsoft.com/keys/microsoft.asc?WT.mc_id=iot-0000-dglover | gpg --dearmor > microsoft.gpg && \
     sudo cp ./microsoft.gpg /etc/apt/trusted.gpg.d/ && \
     sudo apt-get update && \
     sudo apt-get -y install iotedge
@@ -72,7 +72,7 @@ From the SSH session, run the following commands:
 
 ## Install the Docker Registry on the Raspberry Pi
 
-Azure IoT Edge relies on Docker images being distributed from a [Docker Registry](https://docs.docker.com/registry/). In production you would deploy Docker images from a registry such as [Azure Container Registry](https://azure.microsoft.com/en-us/services/container-registry/) or [Docker Hub](https://hub.docker.com/).
+Azure IoT Edge relies on Docker images being distributed from a [Docker Registry](https://docs.docker.com/registry/). In production you would deploy Docker images from a registry such as [Azure Container Registry](https://azure.microsoft.com/services/container-registry/?WT.mc_id=iot-0000-dglover) or [Docker Hub](https://hub.docker.com/).
 
 When you are developing an Azure Iot Edge module it is faster to install a local container registry on the Raspberry Pi and deploy Docker images from the local registry to Azure IoT Edge.
 
@@ -185,8 +185,8 @@ This section is just for your information and demonstrates the steps to creating
 
 
 2. Click on the links to install the following Visual Studio Code extensions
-    1. [Python extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
-    2. [Docker for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)
+    1. [Python extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-python.python&WT.mc_id=iot-0000-dglover)
+    2. [Docker for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker&WT.mc_id=iot-0000-dglover)
 
     Ensure when you are installing the Python and Docker extensions you are installing into SSH. The following is an example of adding the Python extension into the SSH session.
 
@@ -212,11 +212,11 @@ This section is just for your information and demonstrates the steps to creating
 
 ## References
 
-[Tutorial: Create and connect a client application to your Azure IoT Central application (Python)](https://docs.microsoft.com/en-us/azure/iot-central/core/tutorial-connect-device-python)
+[Tutorial: Create and connect a client application to your Azure IoT Central application (Python)](https://docs.microsoft.com/azure/iot-central/core/tutorial-connect-device-python?WT.mc_id=iot-0000-dglover)
 
 ## Explore the Solution
 
-This project was created using the Azure IoT Edge extension. To learn more, see [Tutorial: Develop and deploy a Python IoT Edge module for Linux devices](https://docs.microsoft.com/en-in/azure/iot-edge/tutorial-python-module).
+This project was created using the Azure IoT Edge extension. To learn more, see [Tutorial: Develop and deploy a Python IoT Edge module for Linux devices](https://docs.microsoft.com/azure/iot-edge/tutorial-python-module?WT.mc_id=iot-0000-dglover).
 
 
 
@@ -228,13 +228,13 @@ https://stackoverflow.com/questions/50337042/how-to-generate-a-proof-of-possesio
 
 https://github.com/Azure/azure-iot-sdk-c/blob/master/tools/CACertificates/CACertificateOverview.md
 
-https://docs.microsoft.com/en-us/azure/iot-edge/how-to-auto-provision-x509-certs
+https://docs.microsoft.com/azure/iot-edge/how-to-auto-provision-x509-certs?WT.mc_id=iot-0000-dglover
 
 
-https://docs.microsoft.com/en-us/azure/iot-edge/how-to-create-test-certificates
+https://docs.microsoft.com/azure/iot-edge/how-to-create-test-certificates?WT.mc_id=iot-0000-dglover
 
 
-https://docs.microsoft.com/en-us/azure/iot-edge/how-to-auto-provision-x509-certs
+https://docs.microsoft.com/azure/iot-edge/how-to-auto-provision-x509-certs?WT.mc_id=iot-0000-dglover
 
 
 I got the answer with the Azure support team.
